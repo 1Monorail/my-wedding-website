@@ -3,22 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RT Wedding Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css">
+    <title>My Wedding Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        /* Custom styles */
+        .section-title {
+            background-color: #f0f0f0;
+            padding: 2rem 1.5rem;
+        }
+        .section-subtitle {
+            background-color: #e9f7fe;
+            padding: 2rem 1.5rem;
+        }
+        .section-picture {
+            background-image: url('https://via.placeholder.com/800x400');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 1.5rem;
+            color: #fff; /* Ensure text is readable */
+        }
+        .section-quote {
+            background-color: #f9f9f9;
+            padding: 2rem 1.5rem;
+        }
+        .section-event {
+            background-color: #f5f5f5;
+            padding: 2rem 1.5rem;
+        }
+        .section-event-details {
+            background-color: #eaf2f8;
+            padding: 2rem 1.5rem;
+        }
+        .section-button {
+            background-color: #f0f0f0;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    Reeja Mathew and Timothy Moses are Engaged!
-                </h1>
-                <h2 class="subtitle">
-                    In the embrace of midnight, beneath the shimmering lights of the Eiffel Tower, Timothy Moses and Reeja Mathew forged a bond of love. On June 23rd, 2024, as the world slept, they stood together, hearts intertwined, celebrating Timothy's birthday with a promise that echoed through the quiet Parisian night.
-                </h2>
+
+    <!-- Title Section -->
+    <section class="section section-title">
+        <div class="container">
+            <h1 class="title is-1">Welcome to Our Engagement</h1>
+        </div>
+    </section>
+
+    <!-- Subtitle Section -->
+    <section class="section section-subtitle">
+        <div class="container">
+            <h2 class="subtitle is-3">In the embrace of midnight, beneath the shimmering lights of the Eiffel Tower, Timothy Moses and Reeja Mathew forged a bond of love. On June 23rd, 2024, as the world slept, they stood together, hearts intertwined, celebrating Timothy's birthday with a promise that echoed through the quiet Parisian night.</h2>
+        </div>
+    </section>
+
+    <!-- Picture Section -->
+    <section class="section section-picture">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <h2 class="title is-2">A Picture That Speaks a Thousand Words</h2>
+                </div>
+                <div class="column is-half">
+                    <!-- Placeholder image, replace with actual image -->
+                    <figure class="image is-4by3">
+                        <img src="https://via.placeholder.com/800x400" alt="Placeholder Image">
+                    </figure>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Quote Section -->
+    <section class="section section-quote">
+        <div class="container">
+            <blockquote class="blockquote">
+                <p class="title is-4">"Love is composed of a single soul inhabiting two bodies."</p>
+                <footer class="blockquote-footer">Aristotle</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Event Section -->
+    <section class="section section-event">
+        <div class="container">
+            <h2 class="title is-2">Engagment Party</h2>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="section section-event-details">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <h3 class="title is-3">Event Details</h3>
+                    <p>Tentative Date August 31st 2024</p>
+                </div>
+                <div class="column is-half">
+                    <!-- Placeholder image, replace with actual image -->
+                    <figure class="image is-4by3">
+                        <img src="https://via.placeholder.com/800x400" alt="Placeholder Image">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Button Section -->
+    <section class="section section-button">
+        <div class="container">
+            <div class="buttons is-centered">
+                <a class="button is-primary is-rounded" href="https://example.com">RSVP Now</a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
