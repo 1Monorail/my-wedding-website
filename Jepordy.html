@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy Game</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .jeopardy-board {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            margin-top: 20px;
+        }
+        .jeopardy-cell, .jeopardy-category {
+            background-color: #3273dc; /* Primary color */
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            cursor: pointer;
+        }
+        .jeopardy-category {
+            height: auto;
+            cursor: default;
+        }
+        .jeopardy-cell.answer {
+            background-color: #23d160; /* Success color */
+        }
+    </style>
+</head>
+<body>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Jeopardy Game</h1>
+            <div class="jeopardy-board">
+                <!-- Categories -->
+                <div class="jeopardy-category">Geography</div>
+                <div class="jeopardy-category">Math</div>
+                <div class="jeopardy-category">Literature</div>
+                <div class="jeopardy-category">Science</div>
+                <div class="jeopardy-category">Art</div>
+                
+                <!-- Jeopardy cells -->
+                <div class="jeopardy-cell" data-question="What is the capital of France?" data-answer="Paris" onclick="toggleQA(this)">100</div>
+                <div class="jeopardy-cell" data-question="What is 2 + 2?" data-answer="4" onclick="toggleQA(this)">100</div>
+                <div class="jeopardy-cell" data-question="Who wrote 'Romeo and Juliet'?" data-answer="William Shakespeare" onclick="toggleQA(this)">100</div>
+                <div class="jeopardy-cell" data-question="What is the boiling point of water?" data-answer="100°C or 212°F" onclick="toggleQA(this)">100</div>
+                <div class="jeopardy-cell" data-question="Who painted the Mona Lisa?" data-answer="Leonardo da Vinci" onclick="toggleQA(this)">100</div>
+                
+                <div class="jeopardy-cell" data-question="What is the largest planet in our solar system?" data-answer="Jupiter" onclick="toggleQA(this)">200</div>
+                <div class="jeopardy-cell" data-question="What is the square root of 16?" data-answer="4" onclick="toggleQA(this)">200</div>
+                <div class="jeopardy-cell" data-question="Who wrote 'Pride and Prejudice'?" data-answer="Jane Austen" onclick="toggleQA(this)">200</div>
+                <div class="jeopardy-cell" data-question="What is the chemical symbol for gold?" data-answer="Au" onclick="toggleQA(this)">200</div>
+                <div class="jeopardy-cell" data-question="Who developed the theory of relativity?" data-answer="Albert Einstein" onclick="toggleQA(this)">200</div>
+                
+                <div class="jeopardy-cell" data-question="What is the smallest prime number?" data-answer="2" onclick="toggleQA(this)">300</div>
+                <div class="jeopardy-cell" data-question="What is the capital of Italy?" data-answer="Rome" onclick="toggleQA(this)">300</div>
+                <div class="jeopardy-cell" data-question="Who wrote 'The Odyssey'?" data-answer="Homer" onclick="toggleQA(this)">300</div>
+                <div class="jeopardy-cell" data-question="What is the chemical formula for water?" data-answer="H2O" onclick="toggleQA(this)">300</div>
+                <div class="jeopardy-cell" data-question="Who painted 'Starry Night'?" data-answer="Vincent van Gogh" onclick="toggleQA(this)">300</div>
+                
+                <div class="jeopardy-cell" data-question="What is the speed of light?" data-answer="299,792,458 m/s" onclick="toggleQA(this)">400</div>
+                <div class="jeopardy-cell" data-question="What is the capital of Japan?" data-answer="Tokyo" onclick="toggleQA(this)">400</div>
+                <div class="jeopardy-cell" data-question="Who wrote 'Moby-Dick'?" data-answer="Herman Melville" onclick="toggleQA(this)">400</div>
+                <div class="jeopardy-cell" data-question="What is the powerhouse of the cell?" data-answer="Mitochondria" onclick="toggleQA(this)">400</div>
+                <div class="jeopardy-cell" data-question="Who developed the laws of motion?" data-answer="Isaac Newton" onclick="toggleQA(this)">400</div>
+                
+                <div class="jeopardy-cell" data-question="What is the hardest natural substance?" data-answer="Diamond" onclick="toggleQA(this)">500</div>
+                <div class="jeopardy-cell" data-question="What is the capital of Australia?" data-answer="Canberra" onclick="toggleQA(this)">500</div>
+                <div class="jeopardy-cell" data-question="Who wrote 'To Kill a Mockingbird'?" data-answer="Harper Lee" onclick="toggleQA(this)">500</div>
+                <div class="jeopardy-cell" data-question="What is the chemical symbol for sodium?" data-answer="Na" onclick="toggleQA(this)">500</div>
+                <div class="jeopardy-cell" data-question="Who discovered penicillin?" data-answer="Alexander Fleming" onclick="toggleQA(this)">500</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleQA(cell) {
+            if (cell.classList.contains('answer')) {
+                cell.innerText = cell.getAttribute('data-question');
+                cell.classList.remove('answer');
+            } else {
+                cell.innerText = cell.getAttribute('data-answer');
+                cell.classList.add('answer');
+            }
+        }
+    </script>
+
+</body>
+</html>
