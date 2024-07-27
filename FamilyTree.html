@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Family Tree</title>
+    <style>
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .branch {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .member {
+            margin: 0 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .member:hover {
+            transform: scale(1.1);
+        }
+        .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .connector {
+            width: 2px;
+            background: black;
+            margin: 0 auto;
+        }
+        .marriage-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -10px;
+        }
+        .marriage-line::after {
+            content: "";
+            width: 50px;
+            height: 2px;
+            background: black;
+        }
+        .children {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="tree">
+        <!-- Your Grandparents -->
+        <div class="branch">
+            <div class="member">
+                <img src="your-grandparent1.jpg" alt="Gamma">
+                <p>Gamma</p>
+            </div>
+            <!-- 
+            <div class="member">
+                <img src="your-grandparent2.jpg" alt="Your Grandparent 2">
+                <p>Your Grandparent 2</p>
+            </div>
+            --->
+        </div>
+
+        <!-- Your Parents and Uncles/Aunts -->
+        <div class="branch">
+            <div class="member">
+                <img src="your-parent1.jpg" alt="Mummy">
+                <p>Mummy</p>
+            </div>
+            <div class="member marriage-line">
+                <img src="your-parent2.jpg" alt="Daddy">
+                <p>Daddy</p>
+            </div>
+            <div class="member">
+                <img src="your-uncle1.jpg" alt="Ravi">
+                <p>Ravi</p>
+            </div>
+            <div class="member marriage-line">
+                <img src="your-aunt1.jpg" alt="indra">
+                <p>Indra</p>
+            </div>
+        </div>
+
+        <!-- You and Your Siblings with Spouses and Children -->
+        <div class="branch">
+            <!-- You and Your Spouse -->
+            <div class="member">
+                <img src="Tim.jpg" alt="Tim">
+                <p>Tim</p>
+            </div>
+            <div class="member marriage-line">
+                <img src="your-spouse.jpg" alt="Reeja">
+                <p>Reeja</p>
+            </div>
+
+            <!-- Sibling 1 and Spouse -->
+            <div class="member">
+                <img src="your-sibling1.jpg" alt="Andrew">
+                <p>Andrew</p>
+            </div>
+            <div class="member marriage-line">
+                <img src="your-sibling1-spouse.jpg" alt="Paris">
+                <p>Paris</p>
+            </div>
+
+            <!-- Sibling 2 and Spouse -->
+            <div class="member">
+                <img src="your-sibling2.jpg" alt="Mark 2">
+                <p>Mark</p>
+            </div>
+            <div class="member marriage-line">
+                <img src="your-sibling2-spouse.jpg" alt="Farah">
+                <p>Farah</p>
+            </div>
+        </div>
+
+        <!-- Andrew Children -->
+        <div class="branch children">
+            <div class="member">
+                <img src="your-child1.jpg" alt="Enola">
+                <p>Enola</p>
+            </div>
+            <div class="member">
+                <img src="your-child2.jpg" alt="Aurora">
+                <p>Aurora</p>
+            </div>
+        </div>
+        
+
+        <!-- Spouse's Grandparents -->
+        <div class="branch">
+            <div class="member">
+                <img src="spouse-grandparent1.jpg" alt="Ammachi">
+                <p>Ammachi</p>
+            </div>
+            <!---
+            <div class="member">
+                <img src="spouse-grandparent2.jpg" alt="Spouse Grandparent 2">
+                <p>Spouse Grandparent 2</p>
+            </div>
+            --->
+        </div>
+
+        <!-- Spouse's Parents and Uncles/Aunts -->
+        <div class="branch">
+            <div class="member">
+                <img src="spouse-parent1.jpg" alt="Rosy 1">
+                <p>Rosy</p>
+            </div>
+            <div class="member marriage-line">
+                <img src="spouse-parent2.jpg" alt="Stephanie">
+                <p>Stephanie</p>
+            </div>
+            <div class="member">
+                <img src="spouse-uncle1.jpg" alt="Spouse Uncle 1">
+                <p>Reeja Uncle 1</p>
+            </div>
+            <div class="member marriage-line">
+                <img src="spouse-aunt1.jpg" alt="Spouse Aunt 1">
+                <p>Reeja Aunt 1</p>
+            </div>
+        </div>
+
+        <!-- Spouse's Siblings and Their Spouses
+        <div class="branch">
+            <div class="member">
+                <img src="spouse-sibling1.jpg" alt="Spouse Sibling 1">
+                <p>Spouse Sibling 1</p>
+            </div>
+            <div class="member marriage-line">
+                <img src="spouse-sibling1-spouse.jpg" alt="Spouse Sibling 1 Spouse">
+                <p>Spouse Sibling 1 Spouse</p>
+            </div>
+            
+            <div class="member">
+                <img src="spouse-sibling2.jpg" alt="Spouse Sibling 2">
+                <p>Spouse Sibling 2</p>
+            </div>
+            <div class="member marriage-line">
+                <img src="spouse-sibling2-spouse.jpg" alt="Spouse Sibling 2 Spouse">
+                <p>Spouse Sibling 2 Spouse</p>
+            </div>
+        </div>
+        -->
+        <!-- Spouse's Siblings' Children 
+        <div class="branch children">
+            <div class="member">
+                <img src="spouse-sibling1-child1.jpg" alt="Spouse Sibling 1 Child 1">
+                <p>Spouse Sibling 1 Child 1</p>
+            </div>
+            <div class="member">
+                <img src="spouse-sibling1-child2.jpg" alt="Spouse Sibling 1 Child 2">
+                <p>Spouse Sibling 1 Child 2</p>
+            </div>
+
+            <div class="member">
+                <img src="spouse-sibling2-child1.jpg" alt="Spouse Sibling 2 Child 1">
+                <p>Spouse Sibling 2 Child 1</p>
+            </div>
+            <div class="member">
+                <img src="spouse-sibling2-child2.jpg" alt="Spouse Sibling 2 Child 2">
+                <p>Spouse Sibling 2 Child 2</p>
+            </div>
+        </div>
+        -->
+    </section>
+</body>
+</html>
