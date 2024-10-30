@@ -79,7 +79,7 @@
                     <a class="button is-primary is-large is-fullwidth" href="WeddingParty.html">Wedding Party</a>
                 </div>
                 <div class="column is-one-quarter">
-                    <a class="button is-primary is-large is-fullwidth" href="theknot.com/timothyandreeja">RSVP</a>
+                    <a class="button is-primary is-large is-fullwidth" href="https://www.theknot.com/us/timothy-moses-and-reeja-mathew-jun-2025/rsvp/">RSVP</a>
                 </div>
                 <div class="column is-one-quarter">
                     <a class="button is-primary is-large is-fullwidth" href="Gifts.html">Gifts</a>
@@ -88,13 +88,13 @@
         </div>
     </section>
 
-    <!-- Event Section -->
+    <!-- Event Section 
     <section class="section section-event">
         <div class="container has-text-centered">
             <h2 class="title is-2">Preparing for a wedding!</h2>
         </div>
     </section>
-
+-->
     <!-- Event Details Section 
     <section class="section section-event-details">
         <div class="container has-text-centered">
@@ -117,23 +117,54 @@
         </div>
     </section>
 -->
-    <!-- Picture Section 
+    <!-- Picture Section -->
     <section class="section section-picture">
         <div class="container">
             <div class="columns is-vcentered">
                 <div class="column is-half">
-                    <h2 class="title is-2">Mishu Approves!</h2>
+                    <h2 class="title is-2">Preparing for the wedding!</h2>
+                    <p class="has-text-centered"><strong>Wedding will be at Sand Castle in Franklin Square on June 27th, 2025!</strong>    
                 </div>
+                <div id="countdown">Loading...</div>
+
+    <script>
+        // Set the target date
+        const targetDate = new Date("June 27, 2025 00:00:00").getTime();
+
+        // Update the countdown every second
+        const countdownTimer = setInterval(() => {
+            // Get the current date and time
+            const now = new Date().getTime();
+            
+            // Calculate the time remaining
+            const timeRemaining = targetDate - now;
+            
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the result
+            document.getElementById("countdown").innerHTML = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            // If the countdown is over, display a message
+            if (timeRemaining < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown").innerHTML = "It's here!";
+            }
+        }, 1000);
+    </script>
                 <div class="column is-half">
-                     
                     <figure class="image is-4by3">
-                         <img src="Images/V0/IMG_4800.jpg" alt="Mishu with Reeja">
+                         <img src="Images\Kiss Me in Paris Shoot\11_walk_to_eiffel.jpg" alt="Walk to Eiffel">
                     </figure>
                 </div>
             </div>
         </div>
     </section>
-                    -->
+                    
 
     <!-- Quote Section -->
     <section class="section section-quote">
