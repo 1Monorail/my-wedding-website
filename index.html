@@ -52,12 +52,21 @@
         }
         .hotel-card {
             margin-bottom: 1.5rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
         }
+
+        .hotel-card:hover {
+            background-color: #F2C1D1; /* Muted pink for hover */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        }
+
         .hotel-card a {
             color: #3273dc; /* Bulma link color */
+            text-decoration: underline; /* Emphasize links */
         }
+
         .hotel-card a:hover {
-            color: #00449e;
+            color: #00449e; /* Darker blue on hover */
         }
     </style>
 </head>
@@ -176,7 +185,7 @@
 
     <section class="section">
         <div class="container">
-            <h1 class="title has-text-centered">Nearby Hotels</h1>
+            <h2 class="title has-text-centered">Nearby Hotels</h2>
             <p class="subtitle has-text-centered">Here are some accommodations close to the wedding venue.</p>
             
             <div class="columns is-multiline">
