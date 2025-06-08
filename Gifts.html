@@ -72,14 +72,26 @@
                         href="https://venmo.com/code?user_id=2585749165703168688" target="_blank">
                         Venmo
                     </a>
-                    <div class="notification is-light is-fullwidth has-text-centered">
+                    <a <button class="button is-light is-fullwidth mb-2" onclick="copyZelleNumber()">
                         You can also Zelle (516) 417-3784
-                    </div>
+                        </button>
+                    </a>
                 </div>
 
             </div>
         </div>
     </section>
+
+    <script>
+        function copyZelleNumber() {
+            const zelleNumber = "(516) 417-3784";
+            navigator.clipboard.writeText(zelleNumber).then(() => {
+                alert("Zelle number copied to clipboard!");
+            }).catch(err => {
+                alert("Failed to copy: " + err);
+            });
+        }
+    </script>
 
     <!-- Link Back to Index -->
     <section class="section back-to-home">
